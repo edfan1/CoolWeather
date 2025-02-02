@@ -200,7 +200,7 @@ body {
 
 .weekly-forecast .daily {
     display: grid;
-    grid-template-columns: 100px 150px auto; /* 3 columns */
-    align-items: center; /* Aligns items horizontally */
+    grid-template-columns: 100px 150px auto;
+    align-items: center;
     justify-items: center;
 }
