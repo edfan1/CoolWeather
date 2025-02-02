@@ -8,7 +8,7 @@ I used the following resources to assist in the creation of this project:
 
 MDN Web Docs - Documentation on how to use grid layouts, flex layouts, and scroll bars
 
-ChatGPT 4 - For image generation and setting up the phone sizing of the page
+ChatGPT 4 - For image generation and setting up the phone sizing of the page, information on how to center the overlay
 
 Canva - For the weather icons used 
 
