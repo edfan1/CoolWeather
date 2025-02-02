@@ -86,6 +86,7 @@ body {
     background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .weather-summary {
@@ -203,4 +204,33 @@ body {
     grid-template-columns: 100px 150px auto;
     align-items: center;
     justify-items: center;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 375px;
+    height: 812px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay img {
+    width: 250px;
+    height: auto;
+    border-radius: 30px;
+}
+
+.popup {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
 }

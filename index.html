@@ -8,6 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
     </style>
+    <script src="scripts.js"></script>
 </head>
 <body>
     <div class="phone">
@@ -27,7 +28,7 @@
                 <span>Rain until 7:38 PM</span>
             </div>
             <div class="line"></div>
-            <div class="hourly-forecast white-text">
+            <div class="hourly-forecast white-text" onclick="showPopup('Hourly Forecast', 'It is currently 31° and raining. The temperature will drop to 20° by 9PM. Rainy conditions will continue until around 7:38 PM, although this time may differ based on your area. Today\'s temperature range is 34°-20°. Tomorrow will be 31°-20° with cloudy conditions.')">
                 <ul>
                     <li>
                         <div>Now</div>
@@ -79,18 +80,19 @@
         </div>
         <div class="middle-content"> 
             <div class="todays-info">
-                <div class="rain module white-text">
+                <div class="rain module white-text" onclick="showPopup('Rain Map', '', './assets/rainmapbig.jpg')">
                     Rain: 5" Today
                     <img src="./assets/rainmap2.jpg"></img>
                 </div>
-                <div class="wind module white-text">
+                <div class="wind module white-text" onclick="showPopup('Wind Map', '', '/assets/windmapbig.jpg')">
                     Wind: 5 MPH NW
                     <img src="./assets/windmap2.jpg"></img>
                 </div>
             </div>
-            <div class="dress-recommendation module white-text">
+            <div class="dress-recommendation module white-text" onclick="changeImage()">
                 <p>Dress Recs: </p>
-                <img src="./assets/raindressrec1.jpg"></img>
+                <img id="dressimage" src="./assets/raindressrec1.jpg"></img>
+                <p id="imageindicator">0 O O</p>
             </div>
         </div>
         <div class="weekly-forecast module white-text">
@@ -146,6 +148,13 @@
                     </div>  
                 </li>
             </ul>
+        </div>
+    </div>
+    <div class="overlay grey-text" id="overlay" onclick="hidePopup()">
+        <div class="popup" id="popup">
+            <h3 id="popup-title"></h3>
+            <img id="popup-img" src="" alt="">
+            <p id="popup-content"></p>
         </div>
     </div>
 </body>
