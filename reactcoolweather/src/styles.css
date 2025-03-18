@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono";
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.white-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.grey-text {
+    color: #343f47;
+    opacity: 0.9;
+}
+
+.phone {
+    width: 375px;
+    height: 812px;
+    background: url('./assets/coolweatherbackdrop.webp') no-repeat center center/cover;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.location {
+    text-align: center;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.not-current {
+    font-size: 20px;
+    color: white;
+    opacity: 0.15
+}
+
+.temperature {
+    text-align: center;
+    /* margin-bottom: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.85;
+    margin: 20px;
+}
+
+#feels-like-temp {
+    color: white;
+    font-size: 90px;
+}
+
+#true-temp {
+    font-size: 20px;
+}
+
+#hi-lo-temp {
+    font-size: 15px;
+}
+
+.module {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.weather-summary {
+    flex-direction: column;
+    gap: 5px;
+    overflow: hidden;
+    min-height: 150px;
+    flex-grow: 1;
+}
+
+.text-summary {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.hourly-forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.hourly-forecast li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.hourly-forecast li img {
+    width: 50px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.hourly-forecast ul, .weekly-forecast ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.middle-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.dress-recommendation {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dress-recommendation img {
+    margin: 10px;
+    width: 140px;
+    height: auto;
+    border-radius: 10px;
+    opacity: .85;
+}
+
+.todays-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.wind, .rain {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wind.rain, img {
+    width: 130px;
+    height: auto;
+    opacity: 0.95;
+    border-radius: 10px;
+}
+
+.weekly-forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.weekly-forecast ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.weekly-forecast .daily {
+    display: grid;
+    grid-template-columns: 100px 150px auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 375px;
+    height: 812px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay img {
+    width: 250px;
+    height: auto;
+    border-radius: 30px;
+}
+
+.popup {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
