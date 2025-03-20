@@ -29,15 +29,17 @@ function App() {
   };
 
   return (
-    <div className="phone">
-      <LocationBar />
-      <TemperatureDisplay />
-      <WeatherSummary showPopup={showPopup} />
-      <div className="middle-content">
-        <TodaysInfo showPopup={showPopup} />
-        <DressRecommendation />
+    <div>
+      <div className="phone">
+        <LocationBar />
+        <TemperatureDisplay />
+        <WeatherSummary showPopup={showPopup} />
+        <div className="middle-content">
+          <TodaysInfo showPopup={showPopup} />
+          <DressRecommendation />
+        </div>
+        <WeeklyForecast />
       </div>
-      <WeeklyForecast />
       {popupData.isVisible && <Popup popupData={popupData} hidePopup={hidePopup} />}
     </div>
   );
