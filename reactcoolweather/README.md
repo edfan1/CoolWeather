@@ -1,3 +1,9 @@
+# CoolWeather
+![alt text](preview.png)
+Thanks for visiting. The code in this repo is the REACT implementation prototype for a weather app designed for an assignment in CIS 4120. 
+
+What follows below is the default README information for any project bootstrapped using Create React App, and details how to run the code on your own system.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
